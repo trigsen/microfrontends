@@ -1,1 +1,1 @@
-console.log('products')
+import ('./bootstrap')
