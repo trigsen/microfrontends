@@ -15,7 +15,8 @@ jobs:
   build-marketing:
     runs-on: 'ubuntu-latest'
 
-    uses: 'actions/checkout@v3'
-    run: npm install
-    run: npm build
+    - name: 'builds marketing'
+      uses: 'actions/checkout@v3'
+      run: npm install
+      run: npm build
     
