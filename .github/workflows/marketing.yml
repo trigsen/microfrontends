@@ -12,11 +12,11 @@ defaults:
     working-directory: 'frameworks-mc-example/packages/marketing'
 
 jobs:
-  build-marketing:
+  build_marketing:
     runs-on: 'ubuntu-latest'
 
     - name: 'builds marketing'
-      uses: 'actions/checkout@v3'
-      run: npm install
-      run: npm build
+        uses: 'actions/checkout@v3'
+        run: npm install
+        run: npm build
     
