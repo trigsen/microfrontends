@@ -18,6 +18,6 @@ jobs:
     steps:
       - name: 'builds marketing'
         uses: 'actions/checkout@v3'
-        run: npm install
-        run: npm build
+          run: npm install
+          run: npm build
     
