@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom';
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {'Coppyright © '}
+      {'Copyright © '}
       <MaterialLink component={Link} to="/" color="inherit">
         Your Website
       </MaterialLink>{' '}
