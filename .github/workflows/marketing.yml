@@ -1,0 +1,21 @@
+name: 'deploy-marketing'
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'frameworks-mc-example/packages/marketing/**'
+
+defaults:
+  run:
+    working-directory: 'frameworks-mc-example/packages/marketing'
+
+jobs:
+  build-marketing:
+    runs-on: 'ubuntu-latest'
+
+    uses: 'actions/checkout@v3'
+    run: npm install
+    run: npm build
+    
