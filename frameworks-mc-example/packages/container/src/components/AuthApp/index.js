@@ -1,11 +1,11 @@
-import { mount } from 'marketing/MarketingApp'
+import { mount } from 'auth/AuthApp'
 import React, { useEffect, useRef } from 'react'
 import { useHistory } from 'react-router-dom'
 
-export const MarketingApp = () => {
+export const AuthApp = () => {
     const ref = useRef(null)
     const history = useHistory()
-
+    
     useEffect(() => {
         const { onParentNavigate } = mount(ref.current, {
             onNavigate: ({ pathname: nextPathname }) => {

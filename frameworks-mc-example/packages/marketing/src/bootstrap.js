@@ -5,7 +5,9 @@ import { createMemoryHistory, createBrowserHistory } from 'history'
 
 // mount function
 const mount = (element, props) => {
-    const history = props?.defaultHistoryObject ? props.defaultHistoryObject : createMemoryHistory()
+    const history = props?.defaultHistoryObject 
+    ? props.defaultHistoryObject 
+    : createMemoryHistory({ initialEntries: [props.initialPathname]})
     
     if (props?.onNavigate) {
         history.listen(props.onNavigate)

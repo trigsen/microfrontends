@@ -5,7 +5,11 @@ import { createMemoryHistory, createBrowserHistory } from 'history'
 
 // mount function
 const mount = (element, props) => {
-    const history = props?.defaultHistoryObject ? props.defaultHistoryObject : createMemoryHistory()
+    const history = props?.defaultHistoryObject 
+    ? props.defaultHistoryObject 
+    : createMemoryHistory({ initialEntries: [props.initialPathname]})
+
+    console.log('props?.initialPathname', props?.initialPathname)
     
     if (props?.onNavigate) {
         history.listen(props.onNavigate)
@@ -19,7 +23,7 @@ const mount = (element, props) => {
     return {
         onParentNavigate: ({ pathname: nextPathname }) => {
             const { pathname } = history.location
-
+            console.log('onParentNavigate', nextPathname)
             if (pathname !== nextPathname) {
                 history.push(nextPathname)
             }
