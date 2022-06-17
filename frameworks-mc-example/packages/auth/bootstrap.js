@@ -29,7 +29,7 @@ const mount = (element, props) => {
 
 // dev env for isolation
 if (process.env.NODE_ENV === 'development') {
-    const rootElement = document.querySelector('#_marketing-dev-only')
+    const rootElement = document.querySelector('#_auth-dev-only')
     if (rootElement) {
         mount(rootElement, { defaultHistoryObject: createBrowserHistory() })
     }

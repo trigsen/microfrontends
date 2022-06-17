@@ -8,15 +8,15 @@ const devConfig = {
     mode: 'development',
     entry: './src/index.js',
     devServer: {
-        port: 8084,
+        port: 8081,
         historyApiFallback: true,
     },
     plugins: [
         new ModuleFederationPlugin({
-            name: 'marketing',
+            name: 'auth',
             filename: 'remoteEntry.js',
             exposes: {
-                './MarketingApp': './src/bootstrap.js'
+                './AuthApp': './src/bootstrap.js'
             },
             shared: packageJson.dependencies
         }),
